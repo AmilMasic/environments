@@ -1,0 +1,5 @@
+- Download image from [[https://archlinux.org/download/]]
+- Mount 64-bit version
+- Install defaults
+- ping to check network, eg `ping google`
+- ctrl+c to stop ping process
