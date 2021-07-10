@@ -37,11 +37,21 @@
 - after it is complete run `genfstab /mnt>> /mnt/etc/fstab`
 - nothing will happen, no text should display
 - run `arch-chroot /mnt /bin/bash`, this command switches it to chroot,
-### set up language
+### set up language & time zone
 - run `nano /etc/locale.gen`, if this returns command not found, run `pacman -S nano` to install nano, and run the previous command again. it should open up a text file to configure the language.
 - go down and select the one applicable, if in US, go down and find en_US.UTF-8 UTF-8, delete the # in front of it, and save the file (ctrl+x, y, enter)
 - once that is saved, activated it by running `locale-gen`
 - now we can generate the conf file for the language
 - run `nano /etc/loacel.conf`
 - it will open an empty text file, type in `LANG=en_US.UTF-8`, save it (ctrl+x, Y, enter).
--
+- now it's time to set up timezone, type in `ls /usr/share/zoneinfo` to see the list of all the zones in the world. the list is not complete, to get an accurate list visit [[https://en.wikipedia.org/wiki/List_of_tz_database_time_zones]]
+- currently living in Idaho, therefore my timezone was America/Boise.
+- the next line was `ln -s /usr/share/zoneinfo/America/Boise /etc/localtime`. Remember to update the last part of this line with your correct location.
+- set the time standard using `hwclock --systohc --utc`. this should sync the hardware clock. "should".
+### password and host name
+- set a new password by typing `passwd`
+- current password is ***************
+- to add a hostname for the network type `nano /etc/hostname`
+- type in the name of the server, save it (nano-save-sequence)
+- type `systemctl enable dhcpcd`. apparently this will be started on next bootup and automatically get an IP address.
+- error `failed to enable unit, unit dhcpcd.service does not exist` if you see this, it means the dhcpcd package was not installed. to fix run `pacman -S dhcpcd` and follow up with the previous command.
