@@ -24,3 +24,13 @@ Decided to download and reinstall virtual box, maybe when I installed it previou
 20:02
 It was the Virtual machine!
 After downloading a new version i got Arch Linux installed.
+Stopped working when Emily came home.
+
+09/07/2021
+18:00
+Another late start.
+Reading the guide.
+
+18:43
+So far got the disks partitioned and formatted. Added that to GitHub
+Now it's time to add Pacman
