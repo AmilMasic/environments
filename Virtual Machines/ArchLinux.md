@@ -55,3 +55,6 @@
 - type in the name of the server, save it (nano-save-sequence)
 - type `systemctl enable dhcpcd`. apparently this will be started on next bootup and automatically get an IP address.
 - error `failed to enable unit, unit dhcpcd.service does not exist` if you see this, it means the dhcpcd package was not installed. to fix run `pacman -S dhcpcd` and follow up with the previous command.
+
+### Bootloader install
+- and something went wrong while installing the bootloader.
