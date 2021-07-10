@@ -30,3 +30,18 @@
 - mount it with `mount /dev/sda1 /mnt`
 - followed by `mkdir /mnt/home` which should create the home directory
 - and `mount /dev/sda3 /mnt/home`
+
+### PacMan Setup
+- run `pacstrap /mnt base base-devel` in the terminal
+- installation will take a few moments
+- after it is complete run `genfstab /mnt>> /mnt/etc/fstab`
+- nothing will happen, no text should display
+- run `arch-chroot /mnt /bin/bash`, this command switches it to chroot,
+### set up language
+- run `nano /etc/locale.gen`, if this returns command not found, run `pacman -S nano` to install nano, and run the previous command again. it should open up a text file to configure the language.
+- go down and select the one applicable, if in US, go down and find en_US.UTF-8 UTF-8, delete the # in front of it, and save the file (ctrl+x, y, enter)
+- once that is saved, activated it by running `locale-gen`
+- now we can generate the conf file for the language
+- run `nano /etc/loacel.conf`
+- it will open an empty text file, type in `LANG=en_US.UTF-8`, save it (ctrl+x, Y, enter).
+-
