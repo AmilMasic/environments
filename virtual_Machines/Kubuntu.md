@@ -22,4 +22,4 @@ this will install all the products listed at the same time.
 - `sudo apt-get install build-essential`
 - phantomjs is going to follow a different approach
 - original guide line found on [Gist site](https://gist.github.com/julionc/7476620)
-- copied the information here just in case in gets deleted. [file](/installPhantomJsonUbuntu.md)
+- copied the information here just in case in gets deleted. [file](https://github.com/AmilMasic/environments/blob/master/virtual_Machines/installPhantomJsOnUbuntu.md)
