@@ -68,3 +68,9 @@ to allow file permisions to allow usage of some files
 - on this site click on add new ssh key and paste the information in.
 - you can check your work by typing `ssh -T git@github.com`
 - if prompted, enter yes and the following message should look like "Hi excid3! You've successfully authenticated, but GitHub does not provide shell access."
+
+### Other things
+
+- install zoom by visiting their website
+- same for slack
+- install atom by `sudo snap install atom --classic`
